@@ -21,7 +21,7 @@ public class Stack<T> implements TDAStack<T>{
 
     @Override
     public T pop() throws EmptyStackException{
-        if (this.head == null){
+        if (isEmpty()){
             throw new EmptyStackException();
         }
         this.head = this.head.getPrevious();
@@ -30,7 +30,7 @@ public class Stack<T> implements TDAStack<T>{
     
     @Override
     public T top() throws EmptyStackException{
-        if (this.head == null){
+        if (isEmpty()){
             throw new EmptyStackException();
         }
         return this.head.getData();
