@@ -2,6 +2,9 @@ import java.util.EmptyStackException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+import Extras.Node;
+import Extras.TDAStack;
+
 /**
  * Implementación de un Stack con nodos
  * @author Rodrigo Ortega 318036104

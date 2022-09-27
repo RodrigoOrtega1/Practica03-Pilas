@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+import Extras.SimpleLinkedList;
+
 /**
  * Implementa la Actividad 4 de la Practica03
  * @author Rodrigo Ortega 318036104
