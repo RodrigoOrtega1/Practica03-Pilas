@@ -65,11 +65,4 @@ public class Actividad4 {
             }
         }
     } 
-
-    public static void main(String[] args){
-        Actividad4 act4 = new Actividad4();
-        String[][] board = act4.genBoard(4);
-        act4.solve(board, 0);
-        System.out.println(act4.result);
-    }
 }

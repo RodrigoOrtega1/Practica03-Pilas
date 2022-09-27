@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * Implementa la Actividad 2 de la Practica03
  * @author Rodrigo Ortega 318036104
@@ -28,25 +26,5 @@ public class Actividad2{
         }
         this.stack.pop();
         return result;
-    }
-
-    public static void main(String[] args){
-        Actividad2 actividad2 = new Actividad2();
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Insert string:");
-        String input = scanner.nextLine();
-        actividad2.pushString(input);
-        
-        System.out.println("Insert string:");
-        input = scanner.nextLine();
-        scanner.close();
-        actividad2.pushString(input);
-
-        actividad2.stack.show();
-        
-        
-        System.out.println("La string es: " + actividad2.popString());
-        actividad2.stack.show();
     }
 }

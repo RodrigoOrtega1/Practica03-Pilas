@@ -55,14 +55,4 @@ public class Actividad5 {
         } 
         solution.show();
     }
- 
-    public static void main(String args[]){
-        Actividad5 actividad5 = new Actividad5();
-        int maze[][] = {{0, 0, 0, 0},
-                        {1, 1, 0, 1},
-                        {0, 0, 0, 0},
-                        {1, 1, 1, 0}};
- 
-        actividad5.solveM(maze);
-    }
 }
