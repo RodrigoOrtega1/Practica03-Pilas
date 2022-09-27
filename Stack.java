@@ -15,19 +15,26 @@ import Extras.TDAStack;
 public class Stack<T> implements TDAStack<T>{
     
     //Tope de la lista
-    Node<T> head = null;
+    private Node<T> head = null;
+    private int size = 0;
+
+    public int getSize(){
+        return this.size;
+    }
 
     @Override
     public void push(T e){
         this.head = new Node<>(e, this.head);
+        size++;
     }
 
     @Override
     public T pop() throws EmptyStackException{
-        if (isEmpty()){
+        if (size == 0){
             throw new EmptyStackException();
         }
         this.head = this.head.getPrevious();
+        size--;
         return this.head.getData();
     }
     

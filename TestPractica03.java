@@ -44,29 +44,26 @@ public class TestPractica03 {
     //Actividad 2
     System.out.println("\n -- ACTIVIDAD 2 --");
       Scanner scanner = new Scanner(System.in);
+      
       System.out.println("Insert string:");
       String input = scanner.nextLine();
       act2.pushString(input);
-        
-      System.out.println("Insert string:");
-      input = scanner.nextLine();
+
       scanner.close();
-      act2.pushString(input);
-          
       System.out.println("La string es: " + act2.popString());
-    
+      
     //Actividad 4
     System.out.println("\n -- ACTIVIDAD 4 --");
-      String[][] board = act4.genBoard(4);
+      String[][] board = act4.genBoard(6);
       act4.solve(board, 0);
       System.out.println(act4.result);
 
     //Actividad 5
     System.out.println("\n -- ACTIVIDAD 5 --");
       int maze[][] = {{0, 0, 0, 0},
-                    {1, 1, 0, 1},
-                    {0, 0, 0, 0},
-                    {1, 1, 1, 0}};
+                      {1, 1, 0, 1},
+                      {0, 0, 0, 0},
+                      {1, 1, 0, 0}};
 
       act5.solveM(maze);
 

@@ -6,11 +6,15 @@
  */
 
 public class Actividad2{
-    Stack<String> stack = new Stack<>();
+    Stack<String> stack = new Stack<>(); //Donde se almacenan los caracteres
     
+    /**
+     * Mete todos los caracteres de una cadena a una pila
+     * @param string la cadena a meter a la pila
+     */
     public void pushString(String string){
         int count = string.length();
-        while(0 < count){
+        while(count > 0){
             char c = string.charAt(count - 1);
             String s = "" + c;
             this.stack.push(s);
@@ -18,13 +22,20 @@ public class Actividad2{
         }
         stack.push(Integer.toString(string.length()));
     }
+
+    /**
+     * Saca la primer cadena registrada en la pila
+     * @return una cadena
+     */
     public String popString(){
         int num = Integer.parseInt(this.stack.top());
         String result = "";
         for(int i = 0; i < num; i++){
             result += this.stack.pop();
         }
-        this.stack.pop();
+        if(stack.getSize() > num){ 
+            this.stack.pop();
+        }
         return result;
     }
 }
