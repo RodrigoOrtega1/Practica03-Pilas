@@ -46,12 +46,12 @@ public class Actividad5 {
     }
 
     /**
-     * Manda a llamar la funcion que resuelve el laberinto usando backtracking
+     * Llama a la funcion que resuelve el laberinto
      * @param maze el laberito a resolver
      */
     public void solveM(int maze[][]){
         if (solveMAux(maze, 0, 0) == false) {
-            System.out.print("No hay solucion");
+            System.out.println("No hay solucion");
         } 
         solution.show();
     }

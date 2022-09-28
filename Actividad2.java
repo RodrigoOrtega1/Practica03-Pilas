@@ -28,13 +28,10 @@ public class Actividad2{
      * @return una cadena
      */
     public String popString(){
-        int num = Integer.parseInt(this.stack.top());
+        int num = Integer.parseInt(this.stack.pop());
         String result = "";
         for(int i = 0; i < num; i++){
             result += this.stack.pop();
-        }
-        if(stack.getSize() > num){ 
-            this.stack.pop();
         }
         return result;
     }
