@@ -1,8 +1,7 @@
+import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
-import Extras.Node;
 import Extras.TDAStack;
 
 /**
@@ -14,8 +13,30 @@ import Extras.TDAStack;
 
 public class Stack<T> implements TDAStack<T>{
     
-    //Tope de la lista
-    private Node<T> head = null;
+    //Clase interna que representa un nodo
+    private class Node<T> {
+        T data;
+        Node<T> previous;
+    
+        public Node(T data){
+            this.data = data;
+        }
+        
+        public Node(T data, Node<T> previous){
+            this.data = data;
+            this.previous = previous;
+        }
+    
+        public T getData(){
+            return data;
+        }
+    
+        public Node<T> getPrevious(){
+            return previous;
+        }
+    }
+
+    private Node<T> head = null; //Tope de la lista
     private int size = 0;
 
     public int getSize(){
@@ -25,17 +46,17 @@ public class Stack<T> implements TDAStack<T>{
     @Override
     public void push(T e){
         this.head = new Node<>(e, this.head);
-        size++;
     }
 
     @Override
     public T pop() throws EmptyStackException{
-        if (size == 0){
+        if (isEmpty()){
             throw new EmptyStackException();
         }
+        T data = this.head.getData();
         this.head = this.head.getPrevious();
         size--;
-        return this.head.getData();
+        return data;
     }
     
     @Override
@@ -48,13 +69,9 @@ public class Stack<T> implements TDAStack<T>{
     
     @Override
     public boolean isEmpty(){
-        if (head == null){
-            return true;
-        } else {
-            return false;
-        }
+        return head == null;
     }
-    
+
     @Override
     public void clear(){
         this.head = null;
